@@ -1,0 +1,20 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: Eureka-Server
+eureka:
+  instance:
+    hostname: peer2 #指定了Eureka服务端的IP
+  client:
+    #register-with-eureka: false #表示是否将服务注册到Eureka服务端，由于自身就是Eureka服务端，所以设置为false
+    #fetch-registry: false #表示是否从Eureka服务端获取服务信息，因为这里只搭建了一个Eureka服务端，并不需要从别的Eureka服务端同步服务信息，所以这里设置为false
+    serviceUrl:
+      defaultZone: http://peer1:8080/eureka/
+      #指定Eureka服务端的地址，默认值为http://localhost:8761/eureka
+  server:
+    enable-self-preservation: false
+
+
+
+
