@@ -1,5 +1,8 @@
 server:
   port: 8080
+spring:
+  application:
+    name: Eureka-Server
 eureka:
   instance:
     hostname: localhost #指定了Eureka服务端的IP
